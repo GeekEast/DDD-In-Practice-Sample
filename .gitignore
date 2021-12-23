@@ -1,0 +1,8 @@
+# dependency
+node_modules
+
+# MacOS
+.DS_Store
+
+# complied folder
+dist

@@ -1,0 +1,12 @@
+{
+  "name": "ddd-sample-project",
+  "version": "1.0.0",
+  "description": "Sample project for ddd 4-layer structure",
+  "main": "dist/app.js",
+  "author": "James Tan",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
