@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  ddd-sample-mongodb:
+    image: mongo:5.0
+    restart: always
+    hostname: ddd-sample-mongodb
+    container_name: ddd-sample-mongodb
+    command: mongod --noauth
+    volumes:
+      - ./scripts/db/mongo:/scripts
+    ports:
+      - 9200:27017
+
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    hostname: ddd-dynamodb
+    container_name: ddd-dynamodb
+    command: -jar DynamoDBLocal.jar -sharedDb -optimizeDbBeforeStartup -dbPath /data/dynamodb
+    volumes:
+      - ./data/dynamodb:/data/dynamodb
+    ports:
+      - 9201:8000
