@@ -1,8 +1,8 @@
-import { injectable } from 'inversify';
 import { JsonController, Param, Get } from 'routing-controllers';
+import { Service } from 'typedi';
 
 @JsonController('/users')
-@injectable()
+@Service()
 export class UserController {
   @Get('/')
   getAll() {
